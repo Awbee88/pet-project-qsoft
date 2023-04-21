@@ -1,0 +1,99 @@
+.input {
+
+    height: rem($input-height);
+    width: 100%;
+    padding: rem(17px) rem(20px);
+
+    border: rem(1px) solid $color-input-border;
+    border-radius: $border-radius-inp;
+    outline: none;
+
+    font-size: rem($font-size-small);
+    line-height: rem(16px);
+
+    &:focus {
+        border: rem(1px) solid $slateGray;
+    }
+
+    &::placeholder {
+        color: $heather;
+
+        font-size: rem($font-size-small);
+        line-height: rem(16px);
+    }
+
+    &__search {
+        position: relative;
+    }
+
+    &__icon {
+        width: rem(24px);
+        height: rem(24px);
+    }
+
+    &__button {
+        position: absolute;
+        left: rem(20px);
+        top: 0;
+        bottom: 0;
+
+        height: rem(24px);
+        margin: auto 0;
+
+        color: $slateGray;
+
+        @media #{$screen-tablet} {
+            left: rem(10px);
+        }
+    }
+
+    &--search {
+        padding-left: rem(49px);
+
+        border: none;
+        border-top: rem(1px) solid $color-input-border;
+        border-radius: 0;
+
+        @media #{$screen-tablet} {
+            padding-left: rem(39px);
+            
+            border: rem(1px) solid $color-input-border;
+            border-radius: $border-radius-inp;
+        }
+    }
+
+
+    &--area {
+        height: rem($text-area-height);
+        resize: none;
+        width: 100%;
+    }
+
+    &--err {
+        border-color: $color-input-err;
+
+        &:focus {
+            border-color: $color-input-err;
+        }
+    }
+
+    &--valid {
+        border-color: green;
+    }
+
+    &--disable {
+        border: none;
+        background: $athensGray;
+    }
+
+    &--text-err {
+        color: $color-input-err;
+
+        font-size: rem(10px);
+        line-height: rem(16px);
+    }
+
+    &--small {
+        height: rem(40px);
+    }
+}

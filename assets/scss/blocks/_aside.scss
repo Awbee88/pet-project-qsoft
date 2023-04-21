@@ -1,0 +1,9 @@
+.aside {
+
+    flex-grow: 1;
+    width: 100%;
+
+    @media #{$screen-desktop} {
+        max-width: rem(286px);
+    }
+}

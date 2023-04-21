@@ -1,0 +1,39 @@
+.logo {
+
+    height: rem(31px);
+    width: rem(135px);
+
+    &__link,
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        @include object-fit(contain);
+    }
+
+    &__icon {
+        height: rem(18px);
+        width: rem(94px);
+
+        color: $heather;
+
+        transition: all $transition-duration ease-in-out;
+
+        @media #{$screen-desktop} {
+            height: rem(26px);
+            width: rem(135px);
+        }
+
+        &:hover {
+            color: $slateGray;
+        }
+    }
+
+    &--icon {
+        width: 100%;
+        height: 100%;
+    }
+
+}

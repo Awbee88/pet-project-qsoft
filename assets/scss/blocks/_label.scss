@@ -1,0 +1,17 @@
+.label {
+
+    &__input {
+        color: $color-text-label;
+
+        font-size: rem($font-size-extra-small);
+        line-height: rem($line-height-normal);
+    }
+
+    &--star {
+        color: $redOrange;
+    }
+
+    &--disable {
+        color: $heather;
+    }
+}

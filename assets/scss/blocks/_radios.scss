@@ -1,0 +1,12 @@
+.radios {
+
+    &__list {
+        list-style: none;
+
+        padding-left: 0;
+        
+        display: flex;
+        flex-direction: column;
+        gap: rem(24px);
+    }
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование профиля</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body class="page">
+    <header class="page__header header">
+        <div class="container container--header">
+            <div class="header__row">
+                <div class="header__col header__col--logo">
+                    <div class="logo">
+                        <a class="logo__link" href="#">
+                            <img class="logo__img" src="./public/images/main-logo.svg" alt="main-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__col header__col--search">
+                    <form class="form">
+                        <div class="form__field">
+                            <div class="input__search">
+                                <button class="input__button button button--no-fill">
+                                    <svg class="icon input__icon">
+                                        <use xlink:href="./public/images/icons/sprite.svg#icon-search"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="input input--search input--small" id="search"
+                                    placeholder="Найти...">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="header__col header__col--profile">
+                    <div class="header__profile profile">
+                        <a href="#" class="profile__link">
+                            <div class="profile__account profile--hidden">
+                                <span class="profile__name">Ваня</span>
+                                <div class="profile__avatar">
+                                    <img class="profile__avatar--def" src="./public/images/userpic.svg"
+                                        alt="def-avatar">
+                                    <!-- <img class="profile__avatar--pic" src="./public/images/profile.svg" alt=""> -->
+                                </div>
+                            </div>
+                            <span class="profile__icon">
+                                <svg class="profile__icon--pic icon">
+                                    <use xlink:href="./public/images/icons/sprite.svg#icon-profile"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page__content content content--without-pt">
+        <div class="container container--row">
+            <aside class="content__aside aside">
+                <div class="aside__nav nav">
+                    <div class="nav__burger">
+                        <label class="nav__label" for="burger__check">
+                            <svg class="icon nav__burger-icon">
+                                <use xlink:href="./public/images/icons/sprite.svg#icon-burger"></use>
+                            </svg>
+                            <span class="nav__burger-text">Меню раздела</span>
+                        </label>
+                    </div>
+                    <input class="nav__checkbox" type="checkbox" id="burger__check">
+                    <div class="nav__box">
+                        <div class="nav__title">
+                            <span class="nav__title-text">Меню раздела</span>
+                            <label for="burger__check">
+                                <svg class="icon nav__close">
+                                    <use xlink:href="./public/images/icons/sprite.svg#icon-close"></use>
+                                </svg>
+                            </label>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__item-link">Избранное</a></li>
+                            <li class="nav__item"><a href="#" class="nav__item-link">Моя компания</a></li>
+                            <li class="nav__item"><a href="#" class="nav__item-link nav__item-link--active">Моё
+                                    развитие</a></li>
+                            <li class="nav__item"><a href="#" class="nav__item-link">Новости компании</a></li>
+                            <li class="nav__item"><a href="#" class="nav__item-link">Телефонная книга</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </aside>
+            <div class="content__main">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Тут</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Будут</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Хлебные</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Хлебные</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs--active">Крошки</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="content__main-title">Редактировать профиль</h1>
+                <section class="content__article article">
+                    <form class="form" method="post" action="" data-validation>
+                        <fieldset class="form__fieldset">
+                            <legend class="form__legend">Общее</legend>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="name">Имя<span
+                                        class="label--star">*</span><br></label>
+                                <input type="text" class="input js-required" id="name" name="name"
+                                    placeholder="Введите имя...">
+                            </div>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="sname">Фамилия<span
+                                        class="label--star">*</span><br></label>
+                                <input type="text" class="input js-required" id="sname" name="sname"
+                                    placeholder="Введите фамилию...">
+                            </div>
+                            <div class="form__field form__field--short">
+                                <div class="select" data-select>
+                                    <label class="label label__input" for="spec">Специализация<span
+                                            class="label--star">*</span><br></label>
+                                    <select class="select__control js-required" name="spec" id="spec"
+                                        data-select-control data-placeholder="Выберите специализацию">
+                                        <option></option>
+                                        <option value="1">Не выбран</option>
+                                        <option value="2">Выбранный пункт</option>
+                                        <option value="3">Не выбран</option>
+                                        <option value="4" disabled>Недоступен</option>
+                                        <option value="5">Ещё что-то</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form__field form__field--short">
+                                <div class="select" data-select>
+                                    <label class="label label__input" for="select2">Ещё что-то<br></label>
+                                    <select class="select__control" name="select2" id="select2" data-select-control
+                                        data-placeholder="Это Плейсхолдер...">
+                                        <option></option>
+                                        <option value="1">Не выбран</option>
+                                        <option value="2">Выбранный пункт</option>
+                                        <option value="3">Не выбран</option>
+                                        <option value="4" disabled>Недоступен</option>
+                                        <option value="5">Ещё что-то</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input label--disable" for="city">Город<br></label>
+                                <input type="text" class="input input--disable" id="city" name="city"
+                                    placeholder="Название города..." disabled>
+                            </div>
+                            <div class="form__field">
+                                <label class="label label__input" for="area">Расскажите о себе <br></label>
+                                <textarea class="input input--area" id="area" name="area"
+                                    placeholder="Введите пару слов о себе..."></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form__fieldset">
+                            <legend class="form__legend">Контакты</legend>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="phone">Основной телефон<span
+                                        class="label--star">*</span><br></label>
+                                <input type="tel" class="input js-required" id="phone" name="phone"
+                                    data-inputmask="'mask': '+7 (999) - 999 - 99 - 99'"
+                                    placeholder="Введите номер телефона...">
+                            </div>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="inp">Дополнительный телефон<br></label>
+                                <input type="tel" data-inputmask="'mask': '+7 (999) - 999 - 99 - 99'" class="input"
+                                    id="inp" placeholder="Введите номер телефона...">
+                            </div>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="inp">Дополнительный телефон 2<br></label>
+                                <input type="tel" data-inputmask="'mask': '+7 (999) - 999 - 99 - 99'" class="input"
+                                    id="inp" placeholder="Введите номер телефона...">
+                            </div>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="inp">Дополнительный телефон 3<br></label>
+                                <input type="tel" data-inputmask="'mask': '+7 (999) - 999 - 99 - 99'"
+                                    class="input input--err" id="inp" placeholder="Введите номер телефона...">
+                                <span class="input--text-err">Телефон указан неверно</span>
+                            </div>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="email">E-Mail<span
+                                        class="label--star">*</span><br></label>
+                                <input type="text" class="input js-email js-required" id="email" name="email"
+                                    placeholder="Введите email..." data-inputmask="'alias': 'email'">
+                            </div>
+                            <div class="form__field form__field--short">
+                                <label class="label label__input" for="email2">E-Mail 2<br></label>
+                                <input type="text" class="input js-email" id="email2" name="email2"
+                                    placeholder="example@icloud.com" data-inputmask="'alias': 'email'">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form__fieldset">
+                            <legend class="form__legend">Мое мнение о чекбоксах</legend>
+                            <div class="form__field">
+                                <div class="checkboxes">
+                                    <ul class="checkboxes__list">
+                                        <li class="checkboxes__item">
+                                            <div class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="test"
+                                                    id="check-dis" disabled checked>
+                                                <label class="checkbox__label" for="check-dis">
+                                                    <span class="checkbox__icon">
+                                                        <svg class="icon checkbox__pic">
+                                                            <use
+                                                                xlink:href="./public/images/icons/sprite.svg#icon-checkbox">
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                    Неактивен, выбран
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="checkboxes__item">
+                                            <div class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="test"
+                                                    id="check-dis" disabled>
+                                                <label class="checkbox__label" for="check-dis">
+                                                    <span class="checkbox__icon">
+                                                        <svg class="icon checkbox__pic">
+                                                            <use
+                                                                xlink:href="./public/images/icons/sprite.svg#icon-checkbox">
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                    Неактивен, не выбран
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="checkboxes__item">
+                                            <div class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="test"
+                                                    id="check-check" checked>
+                                                <label class="checkbox__label" for="check-check">
+                                                    <span class="checkbox__icon">
+                                                        <svg class="icon checkbox__pic">
+                                                            <use
+                                                                xlink:href="./public/images/icons/sprite.svg#icon-checkbox">
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                    Я люблю чекбоксы
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="checkboxes__item">
+                                            <div class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="test" id="check">
+                                                <label class="checkbox__label" for="check">
+                                                    <span class="checkbox__icon">
+                                                        <svg class="icon checkbox__pic">
+                                                            <use
+                                                                xlink:href="./public/images/icons/sprite.svg#icon-checkbox">
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                    Я ненавижу чекбоксы
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form__fieldset">
+                            <legend class="form__legend">Мое мнение о радио-кнопках</legend>
+                            <div class="form__field">
+                                <div class="radios">
+                                    <ul class="radios__list">
+                                        <li class="radios__item">
+                                            <div class="radio">
+                                                <input class="radio__input" type="radio" name="test2" id="radio4"
+                                                    disabled checked>
+                                                <label class="radio__label" for="radio4">
+                                                    <span class="radio__icon"><span class="radio__circle"></span></span>
+                                                    Неактивна, выбрана</label>
+                                            </div>
+                                        </li>
+                                        <li class="radios__item">
+                                            <div class="radio">
+                                                <input class="radio__input" type="radio" name="test" id="radio3"
+                                                    disabled>
+                                                <label class="radio__label" for="radio3">
+                                                    <span class="radio__icon"><span class="radio__circle"></span></span>
+                                                    Неактивна, не выбрана</label>
+                                            </div>
+                                        </li>
+                                        <li class="radios__item">
+                                            <div class="radio">
+                                                <input class="radio__input" type="radio" name="test" id="radio1">
+                                                <label class="radio__label" for="radio1">
+                                                    <span class="radio__icon"><span class="radio__circle"></span></span>
+                                                    Я ненавижу радио-кнопки</label>
+                                            </div>
+                                        </li>
+                                        <li class="radios__item">
+                                            <div class="radio">
+                                                <input class="radio__input" type="radio" checked name="test"
+                                                    id="radio2">
+                                                <label class="radio__label" for="radio2">
+                                                    <span class="radio__icon"><span class="radio__circle"></span></span>
+                                                    Я люблю радио-кнопки
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <label class="label label__input label--disable" for="area">Расскажите о
+                                    себе<br></label>
+                                <textarea class="input input--area input--disable" id="area" placeholder="Причина..."
+                                    disabled>
+                                </textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form__fieldset">
+                            <div class="buttons form__buttons">
+                                <button type="button" class="button button--no-fill">
+                                    <span class="button__text">Отменить</span>
+                                </button>
+                                <button type="submit" class="button button--covered button--blue">
+                                    <span class="button__text">Сохранить изменения</span>
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="page__footer footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__col footer__col--social">
+                    <div class="social">
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a class="social__icon" href="#">
+                                    <svg class="icon social__icon-pic">
+                                        <use xlink:href="./public/images/icons/sprite.svg#icon-youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__icon" href="#">
+                                    <svg class="icon social__icon-pic">
+                                        <use xlink:href="./public/images/icons/sprite.svg#icon-inst"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__col footer__col--menu">
+                    <div class="footer__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#">Правила</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">Документы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">Политика конфиденциальности</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__col footer__col--logo">
+                    <div class="logo logo--icon">
+                        <a class="logo__link" href="#">
+                            <svg class="icon logo__icon">
+                                <use xlink:href="./public/images/icons/sprite.svg#icon-logo-footer"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./public/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+.description {
+
+    @media #{$screen-tablet} {
+        width: rem(600px);
+    }
+
+    @media #{$screen-desktop} {
+        width: rem(621px);
+    }
+
+
+    &__title {
+        margin: 0;
+        padding-bottom: rem(20px);
+
+        @include title-h1;
+    }
+
+    &__subtitle {
+        margin: 0;
+        padding-bottom: rem(10px);
+
+        @include title-h3;
+    }
+
+    &__text {
+        margin: 0;
+        padding-bottom: rem(10px);
+
+        @include paragraph;
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__btn {
+        color: $saltBox;
+
+        &-text {
+            font-size: rem($font-size-extra-small);
+            line-height: rem(16px);
+        }
+    }
+
+    &__icon {
+        width: rem(12px);
+        height: rem(12px);
+
+        color: $ceriseRed;
+
+        transition: all $transition-duration $transition-function;
+
+        &--rotate {
+            transform: rotate(180deg);
+        }
+    }
+}

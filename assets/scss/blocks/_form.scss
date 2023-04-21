@@ -1,0 +1,38 @@
+.form {
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(50px);
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+    }
+
+    &__legend {
+        font-size: rem($font-size-big);
+        font-weight: 500;
+        line-height: rem($line-height-big);
+
+        padding-bottom: rem(20px);
+    }
+
+    &__field {
+
+        width: 100%;
+
+        &--short {
+            width: rem(295px);
+
+            @media #{$screen-tablet} {
+                width: rem(335px);
+            }
+        }
+    }
+
+    &__buttons {
+        gap: rem(22px);
+        justify-content: flex-end;
+    }
+}

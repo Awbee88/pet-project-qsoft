@@ -1,0 +1,123 @@
+.button {
+
+    display: flex;
+    gap: rem(10px);
+    align-items: center;
+    justify-content: center;
+
+    height: rem($btn-height-big);
+    padding-left: rem(30px);
+    padding-right: rem(30px);
+
+    border-radius: rem($border-radius-btn);
+    border: transparent;
+
+    cursor: pointer;
+    transition: all $transition-duration ease-in-out;
+
+    color: $color-text-inverse;
+
+    &:hover:not(:disabled) {
+        background: $wildBlueYonder;
+    }
+
+    &:active:not(:disabled) {
+        opacity: 0.5;
+    }
+
+    &--small {
+        height: rem($btn-height-small);
+    }
+
+    &--covered {
+        background: $athensGray;
+    }
+
+    &--blue {
+        background: $curiousBlue;
+    }
+
+    &--no-fill {
+        color: $curiousBlue;
+
+        padding: 0;
+        height: 100%;
+
+        background: none;
+
+        &:hover:not(:disabled) {
+            color: $wildBlueYonder;
+            background: none;
+        }
+    }
+
+    &--beveled {
+        border-radius: rem(5px) 0 rem(5px) 0;
+    }
+
+    &--disable {
+
+        color: $heather;
+
+        cursor: default;
+    }
+
+    &--star {
+        width: rem(35px);
+        height: rem(35px);
+
+        border-radius: 0 0 0 rem(8px);
+        background-color: $white;
+
+        &:hover:not(:disabled) {
+            background-color: $white;
+        }
+    }
+
+    &--circle {
+        width: rem(24px);
+        height: rem(24px);
+
+        border-radius: 50%;
+        background-color: $white;
+    }
+
+    &--red {
+
+        color: $bunker;
+
+        &:hover:not(:disabled) {
+            color: $ceriseRed;
+        }
+    }
+
+
+
+    &__text {
+        font-weight: $font-weight-medium;
+        font-size: rem($font-size-small);
+        line-height: rem(15px);
+    }
+
+    &__icon {
+        width: rem(10px);
+        height: rem(9px);
+    }
+
+    &__close {
+        width: rem(12px);
+        height: rem(12px);
+    }
+
+    &__star {
+        width: rem(21px);
+        height: rem(20px);
+
+        color: $curiousBlue;
+
+        &--white {
+            color: $white;
+        }
+    }
+
+}

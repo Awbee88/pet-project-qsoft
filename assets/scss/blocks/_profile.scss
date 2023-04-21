@@ -1,0 +1,74 @@
+.profile {
+
+    &__icon {
+        position: absolute;
+        right: rem(20px);
+        top: rem(20px);
+
+        @media #{$screen-tablet} {
+            display: none;
+        }
+
+        &--pic {
+            width: rem(24px);
+            height: rem(24px);
+
+            color: $curiousBlue;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $slateGray;
+
+        &:hover {
+            color: $bunker;
+        }
+    }
+
+    &__account {
+        align-items: center;
+        justify-content: flex-end;
+        gap: rem(10px);
+
+        width: rem(138px);
+    }
+
+    &__name {
+        max-width: rem(100px);
+
+        font-size: rem($font-size-small);
+        line-height: rem(17px);
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    &__avatar {
+
+        position: relative;
+        
+        width: rem(40px);
+        height: rem(40px);
+
+        &--def {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &--hidden {
+        display: none;
+
+        @media #{$screen-tablet} {
+            display: flex;
+        }
+    }
+}

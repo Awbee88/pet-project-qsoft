@@ -1,0 +1,50 @@
+.content {
+
+    &--without-pt {
+        padding-top: 0;
+
+        @media #{$screen-desktop} {
+            padding-top: rem(50px);
+        }
+    }
+
+    &__row {
+
+        &--description {
+            padding-top: rem(40px);
+            padding-bottom: rem(40px);
+
+            @media #{$screen-tablet} {
+                padding-top: rem(50px);
+            }
+
+            @media #{$screen-desktop} {
+                padding-top: rem(30px);
+            }
+        }
+    }
+
+    &__aside {
+        padding-bottom: rem(30px);
+    }
+
+    &__main {
+        width: 100%;
+
+        &-title {
+            padding-bottom: rem(30px);
+
+            @media #{$screen-desktop} {
+                padding-bottom: rem(40px);
+            }
+        }
+    }
+
+    &__rewiews {
+        padding-top: rem(100px);
+
+        @media #{$screen-tablet} {
+            padding-top: rem(130px);
+        }
+    }
+}

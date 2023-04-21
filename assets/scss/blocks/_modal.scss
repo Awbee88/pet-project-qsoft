@@ -1,0 +1,134 @@
+.modal {
+
+    width: 100%;
+
+    &--small {
+        @media #{$screen-tablet} {
+            width: rem(610px);
+        }
+    }
+
+    &--small & {
+        &__section {
+            @media #{$screen-tablet} {
+                padding-right: rem(120px);
+                padding-left: rem(120px);
+            }
+        }
+    }
+
+    &--central & {
+
+        &__section--header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__form {
+        gap: rem(40px);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        height: auto !important;
+        max-width: 100%;
+
+        padding-top: rem(32px);
+        padding-bottom: rem(32px);
+
+        @media #{$screen-tablet} {
+            padding-top: rem(48px);
+            padding-bottom: rem(48px);
+        }
+    }
+
+    &__section {
+        padding-left: rem(16px);
+        padding-right: rem(16px);
+
+        &--header {
+            flex-shrink: 0;
+
+            padding-bottom: rem(20px);
+        }
+
+        &--content {
+            flex-grow: 1;
+        }
+
+        &-actions {
+            margin-top: rem(40px);
+        }
+    }
+
+    &__title {
+        font-size: rem($font-size-upper-medium);
+        line-height: rem(28px);
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    .fancybox {
+        &-bg {
+            background: rgba(58, 58, 67, 0.55);
+        }
+
+        &-close {
+            $button-offset: 18px;
+
+            position: absolute;
+            top: rem($button-offset);
+            right: rem($button-offset);
+
+            cursor: pointer;
+
+            @media #{$screen-tablet} {
+                $button-offset: 26px;
+
+                top: rem($button-offset);
+                right: rem($button-offset);
+            }
+
+            &-icon {
+                $icon-size: 12px;
+
+                width: rem($icon-size);
+                height: rem($icon-size);
+
+                color: $curiousBlue;
+            }
+        }
+
+        &-content {
+
+            overflow: visible;
+
+            width: 100%;
+            padding: 0;
+
+            border-radius: rem(24px);
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.16);
+
+            @media #{$screen-tablet} {
+                width: auto;
+            }
+        }
+
+        &-slide {
+            $modal-overlay-offset: 16px;
+
+            padding-right: rem($modal-overlay-offset);
+            padding-left: rem($modal-overlay-offset);
+        }
+
+        &-navigation {
+            display: none;
+        }
+    }
+}

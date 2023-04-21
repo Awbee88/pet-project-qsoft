@@ -1,0 +1,66 @@
+.header {
+
+    background-color: $white;
+    box-shadow: $box-shadows-header;
+
+
+    &__row {
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        @media #{$screen-tablet} {
+            flex-direction: row;
+            align-items: center;
+            gap: rem(50px);
+        }
+
+        @media #{$screen-desktop} {
+            gap: rem(60px);
+        }
+    }
+
+    &__col {
+
+        &--logo {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding-top: rem(17px);
+            padding-bottom: rem(16px);
+            padding-left: rem(20px);
+            padding-right: rem(20px);
+
+            @media #{$screen-tablet} {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &--search {
+
+            width: 100%;
+
+            @media #{$screen-tablet} {
+                padding-top: rem(20px);
+                padding-bottom: rem(20px);
+            }
+        }
+
+        &--profile {
+
+            @media #{$screen-tablet} {
+                border-left: rem(1px) solid $athensGray;
+
+                padding-left: rem(19px);
+                padding-top: rem(20px);
+                padding-bottom: rem(20px);
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.notice-card {
+
+    min-width: rem(286px);
+
+    border-radius: rem($border-radius-card);
+    background-color: $white;
+    box-shadow: $box-shadows-card;
+
+    &__content {
+        padding: rem(16px);
+        padding-bottom: rem(20px);
+    }
+
+    &__title {
+
+        display: flex;
+        justify-content: space-between;
+
+        padding-bottom: rem(10px);
+
+        &-text {
+            font-size: rem($font-size-normal);
+            line-height: rem(24px);
+
+            max-width: rem(206px);
+
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+    }
+
+    &__subtitle {
+        height: rem(51px);
+
+        font-size: rem($font-size-small);
+        line-height: rem(17px);
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &-icon {
+        width: rem(24px);
+        height: rem(24px);
+
+        &--red {
+            color: $redOrange;
+        }
+
+        &--blue {
+            color: $curiousBlue;
+        }
+
+        &--wildBlue {
+            color: $wildBlueYonder;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

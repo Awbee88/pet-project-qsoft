@@ -1,0 +1,138 @@
+/**
+* Colors
+*
+* Название переменной конкретного цвета генерируется через сервис: http://chir.ag/projects/name-that-color/.
+* Значение цвета всегда указывается в HEX-формате в нижнем регистре (кроме исключительных случаев).
+*/
+// Пример указания цветов
+$outer-space: #202f2f;
+$color-text123: $outer-space;
+
+$curiousBlue: #34aadd;
+$bunker: #121920;
+$heather: #bbc4d6;
+$ceriseRed: #dc2c53;
+$slateGray: #768298;
+$white: #fff;
+$redOrange: #ff3332;
+$wildBlueYonder: #6680ae;
+$alabaster: #fafafa;
+$tundora : #4b4b4b;
+$athensGray: #ebebf1;
+$carnation: #f95a59;
+$alto: #d9d9d9;
+$saltBox: #69676d;
+$goldenGrass: #dc971f;
+$tiberClean: #0a2b37;
+$tiber: #0a2b37cc;
+$daintree: #011c2859;
+$tapestry: #a7507b;
+
+
+
+$color-text: $bunker;
+$color-background: $alabaster;
+$color-btn: $curiousBlue;
+$color-text-inverse: $white;
+$color-text-label: $tundora;
+$color-input-border: $athensGray;
+$color-input-err: $carnation;
+
+/**
+* Fonts
+*/
+
+$font-path: "../fonts";
+$font-family-default: "Arial", "Helvetica", sans-serif;
+$font-family-custom: "Roboto";
+$font-family: $font-family-custom, $font-family-default;
+$font-size-base: 16px;
+
+$font-size-huge: 36px;
+$font-size-large: 30px;
+$font-size-big: 24px;
+$font-size-upper-medium: 20px;
+$font-size-medium: 18px;
+$font-size-normal: 16px;
+$font-size-small: 14px;
+$font-size-extra-small: 12px;
+
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+
+$line-height-huge: 47px;
+$line-height-large: 38px;
+$line-height-big: 30px;
+$line-height-base: 23px;
+$line-height-normal: 19px;
+
+$line-height-small: 1.3;
+
+
+/**
+* Breakpoints
+*/
+// Пример указания медиазапросов, затем можно использовать ее как '@media #{$screen-medium} {...}'
+
+$screen-desktop: "(min-width: 1440px)";
+$screen-tablet: "(min-width: 768px)";
+$screen-mobile-only: "(min-width: 375px) and (max-width: 767px)";
+
+
+/**
+* Layout
+*/
+$content-width-desktop: 1280px;
+$content-width-tablet: 768px;
+$content-width-mobile: 375px;
+
+$container-padding: 20px;
+
+
+
+
+/**
+* Sizes
+Нужно вынести в переменные значения размеров тех блоков, которые могут использоваться в разных компонентах.
+*/
+
+$input-height: 50px;
+$btn-height-big: 50px;
+$btn-height-small: 29px;
+$header-height: 105px;
+$footer-height: 80px;
+$text-area-height: 100px;
+
+/**
+* Transitions and Animations
+*/
+$transition-duration: 300ms;
+$transition-duration-fast: 100ms;
+$transition-function: ease-in-out;
+
+
+/**
+* Radius
+*/
+$border-radius: 8px;
+$border-radius-btn: 5px;
+$border-radius-inp: 5px;
+$border-radius-card: 5px;
+
+/**
+* Box-shadows
+*/
+
+$box-shadows-side-menu: 0px 12px 40px rgba(0, 0, 0, 0.03), 0px 3px 10px rgba(164, 164, 164, 0.03);
+$box-shadows-header: 0px 3px 10px rgba(0, 0, 0, 0.05);
+$box-shadows-footer: 0px 3px 10px rgba(0, 0, 0, 0.05);
+$box-shadows-card: 0px 12px 40px rgba(0, 0, 0, 0.03), 0px 3px 10px rgba(164, 164, 164, 0.03);
+
+
+
+/**
+* Z-indexes
+*/
+
+$z-index-header: 50;
+

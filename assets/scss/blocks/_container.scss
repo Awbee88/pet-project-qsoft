@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    max-width: rem($content-width-desktop);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: rem($container-padding);
+    padding-left: rem($container-padding);
+
+    &--row {
+
+        @media #{$screen-desktop} {
+            display: flex;
+            gap: 32px;
+        }
+    }
+
+    &--header {
+        padding-right: 0;
+        padding-left: 0;
+
+        @media #{$screen-tablet} {
+            padding-right: rem($container-padding);
+            padding-left: rem($container-padding);
+        }
+    }
+}

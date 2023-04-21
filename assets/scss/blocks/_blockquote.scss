@@ -1,0 +1,16 @@
+.blockquote {
+    margin: 0;
+    padding: rem(20px) rem(25px);
+    width: 100%;
+
+    font-size: rem($font-size-small);
+    line-height: rem($line-height-base);
+
+    border-left: rem(5px) solid $ceriseRed;
+    border-radius: rem(5px);
+
+    @media #{$screen-tablet} {
+        font-size: rem($font-size-normal);
+        line-height: rem(27px);
+    }
+}

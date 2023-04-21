@@ -1,0 +1,13 @@
+.block {
+    height: 350px;
+    width: 600px;
+    margin-left: 300px;
+
+    font-size: $font-size-huge;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #eee;
+}
